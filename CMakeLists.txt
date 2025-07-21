@@ -46,6 +46,8 @@ install(EXPORT "${PROJECT_NAME}Config"
     DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/giflib
 )
 
+if(ENABLE_TESTS)
 add_executable(test)
 target_sources(test PRIVATE test.c)
 target_link_libraries(test PRIVATE ${PROJECT_NAME})
+endif)_
